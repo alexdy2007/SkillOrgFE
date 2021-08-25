@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
         '&:hover, &$focusVisible' :{
             border: '2px solid black' 
         },
-        "margin-bottom":"20px"
+        "marginBottom":"20px"
     }
   }));
 
@@ -88,11 +88,9 @@ const SkillPage = () => {
                 Skills Heirachy
             </Typography>
             <br></br>
-            <Box display="flex" justifyContent="center">
+            <Box display="flex" justifyContent="center" style={{height:60}}>
                 <ButtonBase className={classes.root , skillAddExpanded ? classes.addSkillActiveButton : classes.addSkillButton} onClick={handleExpandAddSkillClick}>
-                    <IconButton aria-label="Add New Skill To Domain">
-                        <AddCircleOutlineIcon />
-                    </IconButton>
+                    <AddCircleOutlineIcon />
                 </ButtonBase>
             </Box >
 

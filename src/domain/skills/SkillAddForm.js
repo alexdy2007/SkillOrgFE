@@ -118,8 +118,9 @@ const SkillAddForm = (props) => {
     }
 
     const saveSkill = async () => {
+        console.log("TRIGGER SAVE")
         if(isValid()){
-            if(skillDetails.skillID !== 0){
+            if(skillDetails.skillLevelThreeId !== 0 & skillDetails.skillLevelThreeId !== undefined){
                 await apiCalls.skills.edit(skillDetails)
                 if(skills.success===true){
                     setSnackbar({...snackbar, message:`Edited ${skillDetails.skillLevelThreeName}`, severity:"success", open:true})

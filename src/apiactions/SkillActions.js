@@ -16,9 +16,9 @@ if (environment === "development"){
 
 const stripSkillObject = (skillObject) => {
     return {
-        "skillID":skillObject.skillID,
-        "skill": skillObject.skill,
-        "skillSubTypeID":skillObject.skillSubTypeID,
+        "skillLevelThreeId":skillObject.skillLevelThreeId,
+        "skillLevelThreeName": skillObject.skillLevelThreeName,
+        "skillLevelTwoId":skillObject.skillLevelTwoId,
         "description":skillObject.description,
         "imgPath":skillObject.imgPath,
     }
@@ -57,7 +57,7 @@ const SkillsActions = (skilldispatch) => {
         },
         "delete": async skill => {
             skilldispatch({type:ApiActions.IS_LOADING, payload:true})
-            let deleteUrl = skill_base_url_level_three + "/" + skill.skillID
+            let deleteUrl = skill_base_url_level_three + "/" + skill.skillLevelThreeId
             const response = await fetch(deleteUrl, {method:"DELETE", headers:httpheaders})
             if (!response.ok) {
                 failToLoad(skilldispatch, "SOMTHING WENT WRONG IN API SKILL DELETE")

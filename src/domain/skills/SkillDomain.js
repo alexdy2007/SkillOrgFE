@@ -22,9 +22,9 @@ const useStyles = makeStyles((theme) => ({
     card: {
       "minWidth": 275,
       "minHeight":20,
-      "margin-bottom":20,
-      "margin-left":20,
-      "margin-right":20
+      "marginBottom":20,
+      "marginLeft":20,
+      "marginRight":20
     },
     bullet: {
       display: 'inline-block',

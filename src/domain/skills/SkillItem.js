@@ -58,7 +58,7 @@ function SkillItem(props) {
                     {row.skillLevelThreeId}
                 </TableCell>
                 <TableCell>{row.skillLevelThreeName}</TableCell>
-                <TableCell align="right" allign>
+                <TableCell align="right">
                     <IconButton onClick={clickEditSkill}>
                         <EditRoundedIcon/>
                     </IconButton>

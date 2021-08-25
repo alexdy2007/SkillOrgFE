@@ -1,16 +1,39 @@
 import ApiActions from '../apiactions/ApiActions';
 
 
+
+
 let environment = process.env.NODE_ENV
+
+const addSkill = (arr, payload) => {
+    return arr.map(a => {
+        if(a.skillLevelTwoId==payload.skillLevelTwoId){
+            a.skillsLevelThree = [...a.skillsLevelThree, payload]
+        }
+        return a
+    })  
+}
+
+
+const deleteSkill = (arr, payload) => {
+    return arr.map(a => {
+            a.skillsLevelThree = a.skillsLevelThree.filter(x => x.skillLevelThreeId !== payload.skillLevelThreeId)
+            return a
+        })
+}
+
+
 const SkillsReducer = (skillsState, action) => {
+
 
     switch(action.type) {
 
         case ApiActions.ADD:
-            return {...skillsState, data:[...skillsState.data, action.payload]}
+            return {...skillsState, data: addSkill(skillsState.data, action.payload)}
 
         case ApiActions.DELETE:
-            return {...skillsState, data:skillsState.data.filter(x => x.skillID !== action.payload.skillID)}
+          
+            return {...skillsState, data : deleteSkill(skillsState.data, action.payload)}
 
         case ApiActions.IS_LOADING:
             return {...skillsState, IsLoading: action.payload}
@@ -22,10 +45,10 @@ const SkillsReducer = (skillsState, action) => {
             return {...skillsState, success: false};
 
         case ApiActions.EDIT:
-            let data = skillsState.data;
-            let objIndex = data.findIndex((obj => obj.skillID == action.payload.skillID));
-            data[objIndex] = action.payload
-            return {...skillsState, data: data};
+
+            let c = addSkill(deleteSkill(skillsState.data, action.payload), action.payload)
+
+            return {...skillsState, data: addSkill(deleteSkill(skillsState.data, action.payload), action.payload)};
 
         case ApiActions.LOAD_SUCCESS:
             return {...skillsState, success: true};
