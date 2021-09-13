@@ -6,10 +6,6 @@ import React, { useState } from 'react';
 
 export const SnackbarContext = createContext({});
 
-
-
-
-
 function Alert(props) {
     return <MuiAlert elevation={6} variant="filled" {...props} />;
 }

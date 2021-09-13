@@ -48,7 +48,7 @@ const SkillDomain = (props) => {
   const classes = useStyles();
 
   return (
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={12}>
               <Card className={classes.card}>
                   <CardHeader title={props.domainName}>
                   </CardHeader>

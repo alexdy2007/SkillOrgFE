@@ -14,14 +14,12 @@ const addSkill = (arr, payload) => {
     })  
 }
 
-
 const deleteSkill = (arr, payload) => {
     return arr.map(a => {
             a.skillsLevelThree = a.skillsLevelThree.filter(x => x.skillLevelThreeId !== payload.skillLevelThreeId)
             return a
         })
 }
-
 
 const SkillsReducer = (skillsState, action) => {
 

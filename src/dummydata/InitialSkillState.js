@@ -12,21 +12,24 @@ export const InitialSkillState = {
                "skillLevelThreeName":"Postgres",
                "skillLevelTwoId":1,
                "description":"PlaceHolder",
-               "imgPath":"images/temp1.png"
+               "imgPath":"images/temp1.png",
+               "skillAdoptionId":1
             },
             {
                "skillLevelThreeId":2,
                "skillLevelThreeName":"Azure SQL (Sql server)",
                "skillLevelTwoId":1,
                "description":"PlaceHolder",
-               "imgPath":"images/temp1.png"
+               "imgPath":"images/temp1.png",
+               "skillAdoptionId":1
             },
             {
                "skillLevelThreeId":3,
                "skillLevelThreeName":"Aurora (MySQL Postgres)",
                "skillLevelTwoId":1,
                "description":"PlaceHolder",
-               "imgPath":"images/temp1.png"
+               "imgPath":"images/temp1.png",
+               "skillAdoptionId":1
             }
          ]
       },
@@ -41,14 +44,16 @@ export const InitialSkillState = {
                "skillLevelThreeName":"Cosmos",
                "skillLevelTwoId":2,
                "description":"PlaceHolder",
-               "imgPath":"images/temp1.png"
+               "imgPath":"images/temp1.png",
+               "skillAdoptionId":1
             },
             {
                "skillLevelThreeId":5,
                "skillLevelThreeName":"MongoDB",
                "skillLevelTwoId":2,
                "description":"PlaceHolder",
-               "imgPath":"images/temp1.png"
+               "imgPath":"images/temp1.png",
+               "skillAdoptionId":1
             }
          ]
       }
